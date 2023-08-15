@@ -1,4 +1,4 @@
-module "MOD_SHORTNAME" {
+module "amplify" {
   source = "../.."
 
   organization = var.organization

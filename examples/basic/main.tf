@@ -1,4 +1,4 @@
-module "amplify" {
+module "amplify_app" {
   source = "../.."
 
   organization = var.organization

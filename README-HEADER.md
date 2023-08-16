@@ -16,20 +16,15 @@ More information can be found on these install methods and more in [the document
 
 ## Usage
 
-<!-- TODO -->
-This should be a basic description of what this module does.
-Fill this out before completing usage of this template.
-<!-- TODO -->
+Provisions an Amplify application.
+
+The recommended usage for this module is to avoid populating any `token` input variables and to import an Amplify application that was created in the AWS console. This will allow you to avoid the need to handle managing the secure usage of a token with Terraform.
 
 Integrate this module like so:
 
 ```hcl
 module "amplify" {
   source = "github.com/pbs/terraform-aws-amplify-module?ref=x.y.z"
-
-  <!-- TODO -->
-  Show some examples of valid values for required parameters.
-  <!-- TODO -->
 
   # Tagging Parameters
   organization = var.organization
@@ -40,6 +35,8 @@ module "amplify" {
   # Optional Parameters
 }
 ```
+
+The easiest way to use this module is to use the AWS console to create an Amplify application and then import it into Terraform using the [import utility](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/amplify_app#import).
 
 ## Adding This Version of the Module
 

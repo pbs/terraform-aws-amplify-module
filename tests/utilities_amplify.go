@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func testTemplate(t *testing.T, variant string) {
+func testAmplify(t *testing.T, variant string) {
 	t.Parallel()
 
 	terraformDir := fmt.Sprintf("../examples/%s", variant)
@@ -22,6 +22,7 @@ func testTemplate(t *testing.T, variant string) {
 
 	terraform.InitAndApply(t, terraformOptions)
 
-	output := terraform.Output(t, terraformOptions, "hello_world")
-	assert.Equal(t, "Hello, World!", output)
+	name := terraform.Output(t, terraformOptions, "name")
+	expectedName := fmt.Sprintf("example-tf-amplify-%s", variant)
+	assert.Equal(t, expectedName, name)
 }

@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-amplify-module?ref=x.y.z
+github.com/pbs/terraform-aws-amplify-module?ref=0.0.17
 ```
 
 ### Alternative Installation Methods
@@ -24,7 +24,7 @@ Integrate this module like so:
 
 ```hcl
 module "amplify" {
-  source = "github.com/pbs/terraform-aws-amplify-module?ref=x.y.z"
+  source = "github.com/pbs/terraform-aws-amplify-module?ref=0.0.17"
 
   # Tagging Parameters
   organization = var.organization
@@ -42,7 +42,7 @@ The easiest way to use this module is to use the AWS console to create an Amplif
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`x.y.z`
+`0.0.17`
 
 Note, however that subtrees can be altered as desired within repositories.
 

@@ -15,4 +15,10 @@ resource "aws_amplify_domain_association" "domain" {
       prefix      = sub_domain.value.prefix
     }
   }
+  lifecycle {
+    ignore_changes = [
+      sub_domain
+    ]
+  }
+
 }
